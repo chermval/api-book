@@ -8,17 +8,16 @@
   },
   "dependencies": {
     "koa": "^2.13.0",
-    "koa-basic-auth": "^4.0.0",
     "koa-bodyparser": "^4.3.0",
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.1",
     "koa-router": "^9.4.0",
     "koa-simple-healthcheck": "^0.0.1",
-    "koa2-cors": "^2.0.6"
+    "koa2-cors": "^2.0.6",
+    "mongoose": "5.10.15"
   },
   "devDependencies": {
     "@types/koa": "^2.11.4",
-    "@types/koa-basic-auth": "^2.0.3",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-mount": "^4.0.0",

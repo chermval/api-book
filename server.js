@@ -6,9 +6,10 @@ const logger = require('koa-logger')
 const cors = require('koa2-cors')
 
 const app = new Koa()
-const router = new Router();
+const router = new Router()
 
 const books = require('./routes/books')
+
 
 // middlewares
 app.use(bodyparser({
@@ -39,6 +40,7 @@ app.use(require('koa-simple-healthcheck')(
 app.use(router.routes())
 app.use(router.allowedMethods())
 app.use(books.routes(), books.allowedMethods())
+
 
 app.listen(3000)
 

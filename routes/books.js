@@ -1,11 +1,9 @@
 const router = require('koa-router')()
+const BookController = require('../controllers/booksController')
 
-router.prefix('/books')
+router.prefix('/api/v1/books')
 
-//test
-router.get('/', function (ctx, next) {
-  ctx.body = 'this is a test response!'
-})
-
+//Get all Books 
+router.get('/', BookController.findAll)
 
 module.exports = router

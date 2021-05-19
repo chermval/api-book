@@ -4,6 +4,7 @@ const json = require('koa-json')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const cors = require('koa2-cors')
+const healthcheck = require('koa-simple-healthcheck')
 
 const app = new Koa()
 const router = new Router()
@@ -28,8 +29,7 @@ app.use(async (ctx, next) => {
 })
 
 // api healthcheck
-app.use(require('koa-simple-healthcheck')(
-  {
+app.use(healthcheck({
     path: '/api/v1/healthcheck',
     healthy: function () {
       return { everything: 'is ok'}

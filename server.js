@@ -9,10 +9,13 @@ const healthcheck = require('koa-simple-healthcheck')
 const app = new Koa()
 const router = new Router()
 
-const books = require('./routes/books')
-
 
 // middlewares
+// config
+require('dotenv').config({
+  path: './config/.env'
+})
+
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
 }))
@@ -39,6 +42,8 @@ app.use(healthcheck({
 
 app.use(router.routes())
 app.use(router.allowedMethods())
+
+const books = require('./routes/books')
 app.use(books.routes(), books.allowedMethods())
 
 

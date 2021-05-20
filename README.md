@@ -1,5 +1,5 @@
 # API BOOK
-Nodejs (Koajs) api rest book
+Node (Koajs) api rest book
 
 ## Install
 
@@ -9,7 +9,13 @@ Nodejs (Koajs) api rest book
 
 ## Run the app
 
+### Local/Dev
+`npm run dev`
+### Production
+`npm run start`
+
 ## Run the test
+`npm run test`
 
 ## Usage
 
@@ -17,5 +23,10 @@ Nodejs (Koajs) api rest book
 |---------|-------------------|-----------------------|
 | `GET`   | `/api/v1/healthcheck` |  http://localhost:3000/api/v1/healthcheck |
 | `GET`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books |
+| `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books  body: `{
+    "title": "test",
+    "description": "desc",
+    "author": "author"
+}` | 
 
 

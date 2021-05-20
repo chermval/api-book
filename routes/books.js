@@ -5,5 +5,5 @@ router.prefix('/api/v1/books')
 
 //Get all Books 
 router.get('/', BookController.findAll)
-
+router.post('/', BookController.save)
 module.exports = router

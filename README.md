@@ -23,6 +23,6 @@ Node (Koajs) api rest book
 |---------|-------------------|-----------------------|
 | `GET`   | `/api/v1/healthcheck` |  http://localhost:3000/api/v1/healthcheck |
 | `GET`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books |
-| `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books body: `{ "title": "test", "description": "desc", "author": "author" }` | 
+| `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books    body: `{ "title": "test", "description": "desc", "author": "author" }` | 
 
 

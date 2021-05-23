@@ -26,6 +26,28 @@ class BookServicedb {
             })
         }) 
     }
+
+    findById (id) {
+        return new Promise((resolve, reject) => {
+            BookModel.findById(id , (err, res) => {
+                if(err) {
+                    reject(err)
+                }
+                resolve(res)
+            })
+        })
+    }
+
+    deleteById (id) {
+        return new Promise((resolve, reject) => {
+            BookModel.findByIdAndDelete(id , (err, res) => {
+                if(err) {
+                    reject(err)
+                }
+                resolve(res)
+            })
+        })
+    }
   
 }
 

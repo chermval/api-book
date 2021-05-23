@@ -11,5 +11,7 @@ router.post('/', BookController.save)
 router.get('/:id', BookController.findById)
 //Delete book by id
 router.delete('/:id', BookController.deleteById)
+//Update book by id
+router.put('/:id', BookController.updateById)
 
 module.exports = router

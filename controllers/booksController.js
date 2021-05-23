@@ -35,7 +35,15 @@ class BooksController {
         ctx.body = await ModelDb.deleteById(ctx.request.params.id)
         ctx.status = 200
     }
-
+    
+    /**
+       * Update book by id
+        * @param {ctx} Koa Context
+    */
+     async updateById(ctx) {
+        ctx.body = await ModelDb.updateById(ctx.request.params.id, ctx.request.body)
+        ctx.status = 200
+    }
 }
 
 module.exports = new BooksController()

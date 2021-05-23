@@ -3,7 +3,7 @@ const BookModel = require('../models/book')
 class BookServicedb {
     constructor () { }
   
-    findAll () {
+    async findAll () {
         return new Promise((resolve, reject) => {
             BookModel.find({}, (err, res) => {
                 if(err) {
@@ -14,7 +14,7 @@ class BookServicedb {
         })
     }
  
-    save (obj) {
+    async save (obj) {
         const book = new BookModel(obj)
         return new Promise((resolve, reject)=> {
             book.save((err, res) => {
@@ -27,7 +27,7 @@ class BookServicedb {
         }) 
     }
 
-    findById (id) {
+    async findById (id) {
         return new Promise((resolve, reject) => {
             BookModel.findById(id , (err, res) => {
                 if(err) {
@@ -38,9 +38,21 @@ class BookServicedb {
         })
     }
 
-    deleteById (id) {
+    async deleteById (id) {
         return new Promise((resolve, reject) => {
             BookModel.findByIdAndDelete(id , (err, res) => {
+                if(err) {
+                    reject(err)
+                }
+                resolve(res)
+            })
+        })
+    }
+
+    async updateById (id,obj) {
+
+        return new Promise((resolve, reject) => {
+            BookModel.findOneAndUpdate({_id: id}, obj, {new: true} , (err, res) => {
                 if(err) {
                     reject(err)
                 }

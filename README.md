@@ -19,12 +19,12 @@ Node (Koajs) api rest book
 
 ## Usage
 
-| METHOD  | URI               | EXAMPLE               | 
-|---------|-------------------|-----------------------|
-| `GET`   | `/api/v1/healthcheck` |  http://localhost:3000/api/v1/healthcheck |
-| `GET`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books |
-| `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books  -  body: `{ "title": "test", "description": "desc", "author": "author" }` | 
-| `GET`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} |
-| `DELETE`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} |
+| ACTION | METHOD  | URI               | EXAMPLE               | 
+|--------|---------|-------------------|-----------------------|
+| Validate health of api | `GET`   | `/api/v1/healthcheck` |  http://localhost:3000/api/v1/healthcheck |
+| Get all books | `GET`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books |
+| Create book | `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books  -  body: `{ "title": "test", "description": "desc", "author": "author" }` | 
+| Get a book by id | `GET`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} |
+| Delete a book by id | `DELETE`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} |
 
 

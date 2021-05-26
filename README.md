@@ -26,5 +26,4 @@ Node (Koajs) api rest book
 | Create book | `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books  -  body: `{ "title": "test", "description": "desc", "author": "author" }` | 
 | Get a book by id | `GET`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} |
 | Delete a book by id | `DELETE`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} |
-
-
+** in example replace `{id}` for existing id value in DB

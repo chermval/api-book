@@ -7,6 +7,8 @@ KoaJS api rest book
     Node
     MongoDB
 
+`npm i`
+
 ## Run the app
 
 ### Local/Dev
@@ -26,6 +28,6 @@ KoaJS api rest book
 | Create book | `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books  -  body: `{ "title": "test", "description": "desc", "author": "author" }` | 
 | Get a book by id | `GET`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} [1] |
 | Delete a book by id | `DELETE`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} [1] |  
-| Update dato from book by id | `PUT`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books{id} [1] |
+| Update data from book by id | `PUT`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books{id} [1] |
 
 [1]: replace `{id}` for existing id value in DB

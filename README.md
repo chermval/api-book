@@ -1,5 +1,5 @@
 # API BOOK
-Node (Koajs) api rest book
+KoaJS api rest book
 
 ## Install
 
@@ -19,13 +19,13 @@ Node (Koajs) api rest book
 
 ## Usage
 
-| METHOD  | URI               | EXAMPLE               | 
-|---------|-------------------|-----------------------|
-| `GET`   | `/api/v1/healthcheck` |  http://localhost:3000/api/v1/healthcheck |
-| `GET`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books |
-| `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books  -  body: `{ "title": "test", "description": "desc", "author": "author" }` | 
-| `GET`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} |
-| `DELETE`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books{id} |
-| `PUT`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books{id} |
+| ACTION | METHOD  | URI               | EXAMPLE               | 
+|--------|---------|-------------------|-----------------------|
+| Validate health of api | `GET`   | `/api/v1/healthcheck` |  http://localhost:3000/api/v1/healthcheck |
+| Get all books | `GET`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books |
+| Create book | `POST`   | `/api/v1/books/` |  http://localhost:3000/api/v1/books  -  body: `{ "title": "test", "description": "desc", "author": "author" }` | 
+| Get a book by id | `GET`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} [1] |
+| Delete a book by id | `DELETE`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books/{id} [1] |  
+| Update dato from book by id | `PUT`   | `/api/v1/books/{id}` |  http://localhost:3000/api/v1/books{id} [1] |
 
-
+[1]: replace `{id}` for existing id value in DB

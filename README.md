@@ -1,5 +1,5 @@
 # API BOOK
-Node (Koajs) api rest book
+KoaJS api rest book
 
 ## Install
 

@@ -7,17 +7,26 @@ KoaJS api rest book
     Node
     MongoDB
 
-`npm i`
+```bash
+npm i
+```
 
-## Run the app
+## Run the apps
 
-### Local/Dev
-`npm run dev`
+### Dev
+```bash
+npm run dev
+```
+
 ### Production
-`npm run start`
+```bash
+npm run start
+```
 
 ## Run the test
-`npm run test`
+```bash
+npm run test
+```
 
 ## Usage
 

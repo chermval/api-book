@@ -1,4 +1,10 @@
+const Ajv = require('ajv/dist/jtd')
+const ajv = new Ajv()
+
 const ModelDb = require('../services/bookService')
+const schemaBooks = require('../schemas/booksSchema')
+const validateBooks = ajv.compile(schemaBooks)
+
 
 class BooksController {
     /**
@@ -14,8 +20,12 @@ class BooksController {
         * @param {ctx} Koa Context
     */
      async save(ctx) {
-        ctx.body = await ModelDb.save(ctx.request.body)
-        ctx.status = 201
+        if (validateBooks(ctx.request.body)) {
+            ctx.body = await ModelDb.save(ctx.request.body)
+            ctx.status = 201
+        } else {
+            ctx.status = 422
+        }
     }
 
     /**
@@ -41,9 +51,14 @@ class BooksController {
         * @param {ctx} Koa Context
     */
      async updateById(ctx) {
-        ctx.body = await ModelDb.updateById(ctx.request.params.id, ctx.request.body)
-        ctx.status = 200
+        if (validateBooks(ctx.request.body)) {
+            ctx.body = await ModelDb.updateById(ctx.request.params.id, ctx.request.body)
+            ctx.status = 200
+        } else {
+            ctx.status = 422
+        }
     }
+
 }
 
 module.exports = new BooksController()

@@ -4,61 +4,24 @@ class BookServicedb {
     constructor () { }
   
     async findAll () {
-        return new Promise((resolve, reject) => {
-            BookModel.find({}, (err, res) => {
-                if(err) {
-                    reject(err)
-                }
-                resolve(res)
-            })
-        })
+        return BookModel.find()
     }
  
     async save (obj) {
         const book = new BookModel(obj)
-        return new Promise((resolve, reject)=> {
-            book.save((err, res) => {
-                if (err) {
-                    reject(err)
-                }
-                resolve(res)
-                console.log(res)
-            })
-        }) 
+        return book.save()
     }
 
     async findById (id) {
-        return new Promise((resolve, reject) => {
-            BookModel.findById(id , (err, res) => {
-                if(err) {
-                    reject(err)
-                }
-                resolve(res)
-            })
-        })
+        return BookModel.findById(id)
     }
 
     async deleteById (id) {
-        return new Promise((resolve, reject) => {
-            BookModel.findByIdAndDelete(id , (err, res) => {
-                if(err) {
-                    reject(err)
-                }
-                resolve(res)
-            })
-        })
+        return BookModel.findByIdAndDelete(id)
     }
 
     async updateById (id,obj) {
-
-        return new Promise((resolve, reject) => {
-            BookModel.findOneAndUpdate({_id: id}, obj, {new: true} , (err, res) => {
-                if(err) {
-                    reject(err)
-                }
-                resolve(res)
-            })
-        })
+        return BookModel.findOneAndUpdate({_id: id}, obj, {new: true})
     }
   
 }

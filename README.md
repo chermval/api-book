@@ -4,8 +4,8 @@ KoaJS api rest book
 ## Install
 
 ### Requisites
-    Node
-    MongoDB
+- Node
+- MongoDB
 
 ```bash
 npm i

@@ -13,6 +13,8 @@ npm i
 
 ## Run the apps
 
+Copy or rename ".env.example" file to ".env" and modify the values in file.
+
 ### Dev
 ```bash
 npm run dev
